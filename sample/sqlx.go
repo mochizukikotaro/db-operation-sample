@@ -8,7 +8,7 @@ import (
 )
 
 func SampleSqlx() {
-	users := model.CreateUsers()
+	users := []model.User{}
 
 	db, _ := sqlx.Open("postgres",
 		"user=postgres password=pw dbname=postgres sslmode=disable")

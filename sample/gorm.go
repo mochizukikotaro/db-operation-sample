@@ -8,7 +8,7 @@ import (
 )
 
 func SampleGorm() {
-	users := model.CreateUsers()
+	users := []model.User{}
 
 	db, _ := gorm.Open("postgres",
 		"user=postgres password=pw dbname=postgres sslmode=disable")

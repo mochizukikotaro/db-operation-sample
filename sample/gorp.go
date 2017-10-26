@@ -9,7 +9,7 @@ import (
 )
 
 func SampleGorp() {
-	users := model.CreateUsers()
+	users := []model.User{}
 	dbmap := initDb()
 	defer dbmap.Db.Close()
 	dbmap.Select(&users, "select * from users")
@@ -21,6 +21,6 @@ func initDb() *gorp.DbMap {
 	db, _ := sql.Open("postgres",
 		"user=postgres password=pw dbname=postgres sslmode=disable")
 	dbmap := &gorp.DbMap{Db: db, Dialect: gorp.SqliteDialect{}}
-	dbmap.AddTableWithName(model.CreateUser(), "users").SetKeys(true, "Id")
+	dbmap.AddTableWithName(model.User{}, "users").SetKeys(true, "Id")
 	return dbmap
 }

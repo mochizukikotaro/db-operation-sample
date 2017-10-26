@@ -8,7 +8,7 @@ import (
 )
 
 func SampleDbr() {
-	users := model.CreateUsers()
+	users := []model.User{}
 
 	conn, _ := dbr.Open("postgres",
 		"user=postgres password=pw dbname=postgres sslmode=disable", nil)

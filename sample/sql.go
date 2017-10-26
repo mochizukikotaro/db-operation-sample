@@ -8,13 +8,13 @@ import (
 )
 
 func SampleSql() {
-	users := model.CreateUsers()
+	users := []model.User{}
 
 	db, err := sql.Open("postgres",
 		"user=postgres password=pw dbname=postgres sslmode=disable")
 	rows, _ := db.Query(`SELECT * FROM "users"`)
 	defer rows.Close()
-	user := model.CreateUser()
+	user := model.User{}
 	for rows.Next() {
 		err = rows.Scan(&user.Id, &user.Name)
 		if err != nil {
