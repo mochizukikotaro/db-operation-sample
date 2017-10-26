@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/lib/pq"
-	"github.com/mochizukikotaro/db-operation-sample/model"
+	"github.com/mochizukikotaro/golang-orm-sample/model"
 )
 
 func SampleSql() {

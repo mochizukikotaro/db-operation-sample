@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/go-gorp/gorp"
 	_ "github.com/lib/pq"
-	"github.com/mochizukikotaro/db-operation-sample/model"
+	"github.com/mochizukikotaro/golang-orm-sample/model"
 )
 
 func SampleGorp() {

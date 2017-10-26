@@ -2,7 +2,7 @@ package main
 
 import (
 	_ "github.com/lib/pq"
-	"github.com/mochizukikotaro/db-operation-sample/sample"
+	"github.com/mochizukikotaro/golang-orm-sample/sample"
 )
 
 func main() {
